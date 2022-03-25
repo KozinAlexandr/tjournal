@@ -1,5 +1,8 @@
-import Head from 'next/head'
-import { Header } from '../components/Header'
+import Head from 'next/head';
+
+import { Header } from '../components/Header';
+import { Post } from '../components/Post';
+
 export default function Home() {
   return (
     <div>
@@ -13,6 +16,15 @@ export default function Home() {
         rel="stylesheet"></link>
       </Head>
       <Header/>
+      
+      <div>
+        <div className = "leftSide"></div>
+        <div className = "content">
+          <Post />
+        </div>
+        <div className = "rightSide"></div>
+      </div>
+
     </div>
   )
 }

@@ -47,6 +47,6 @@ export const Header: React.FC = () => {
       </div>
 
     </Paper>
-  )
-}
+  );
+};
 //React.FC - функциональный компонент
