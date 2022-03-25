@@ -19,7 +19,7 @@ export default function Profile() {
               src="https://avatars.githubusercontent.com/u/66381294?v=4"
             />
             <Typography style={{ fontWeight: 'bold' }} className="mt-10" variant="h4">
-              Amon Bower
+              Alexandr Kozin
             </Typography>
           </div>
           <div>
@@ -42,11 +42,11 @@ export default function Profile() {
         </div>
         <div className="d-flex mb-10 mt-10">
           <Typography style={{ fontWeight: 'bold', color: '#35AB66' }} className="mr-15">
-            +208
+            +7
           </Typography>
-          <Typography>2 подписчика</Typography>
+          <Typography>15 подписчиков</Typography>
         </div>
-        <Typography>На проекте с 15 сен 2016</Typography>
+        <Typography>В универе в 2020 года</Typography>
 
         <Tabs className="mt-20" value={0} indicatorColor="primary" textColor="primary">
           <Tab label="Статьи" />

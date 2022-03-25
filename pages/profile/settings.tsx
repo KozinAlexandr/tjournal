@@ -24,7 +24,6 @@ export default function Settings() {
             fullWidth
             required
           />
-          <TextField className="mb-20" size="small" label="Эл. почта" variant="outlined" fullWidth required />
           <TextField size="small" label="Пароль" variant="outlined" fullWidth required />
           <Divider className="mt-30 mb-20" />
           <Button color="primary" variant="contained">

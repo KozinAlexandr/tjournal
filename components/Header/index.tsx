@@ -20,13 +20,10 @@ export const Header: React.FC = () => {
         </IconButton>
         <Link href="/">
           <a>
-            <svg className={styles.logo} viewBox="0 0 24 25">
-              <path fill = "#e8a427" d="M0 19h8.5v6H0v-6z"></path>
-              <path d="M0 7h8.5v18l6.5-6V7h9V0H0V7z"></path>
-              <path fill = "rgba(0,0,0,0.15)" d="M7.5 19h1v6l-1-6z"></path>
-            </svg>
+            <img height={35} className="mr-20" src="/static/img/logo.svg" alt="Logo" />
           </a>
         </Link>
+
         
         <div className={styles.searchBlock}>
           <SearchIcon/>
@@ -54,7 +51,6 @@ export const Header: React.FC = () => {
             <ArrowBottom />
           </a>
         </Link>
-        
       </div>
     </Paper>
   );

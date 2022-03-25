@@ -5,7 +5,7 @@ import { Header } from '../components/Header';
 import {MuiThemeProvider, CssBaseline} from '@material-ui/core';
 import {theme} from '../theme';
 
-import '../styles/globals.css';
+import '../styles/globals.scss';
 import 'macro-css';
 
 
