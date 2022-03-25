@@ -23,3 +23,19 @@ a {
   width: 100%;
   margin: 0 auto;
 }
+
+.wrapper {
+  display: flex;
+  padding: 0 30px;
+  padding-top: 80px;
+}
+
+.main-layout-white {
+  background-color: #fff;
+  height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  width: 680px;
+}

@@ -2,10 +2,10 @@ import { Paper, Button, IconButton, Avatar } from '@material-ui/core';
 import React from 'react';
 import {
   SearchOutlined as SearchIcon, 
-  CreateOutlined as PenIcon, 
   SmsOutlined as MessageIcon,
   Menu as MenuIcon,
   NotificationsOutlined as NotificationIcon,
+  ExpandMoreOutlined as ArrowBottom,
 } from '@mui/icons-material/';
 
 import styles from './Header.module.scss';
@@ -29,7 +29,7 @@ export const Header: React.FC = () => {
         </div>
         
         <Button variant="contained" className={styles.penButton}>
-          <PenIcon/>
+          Новая запись
         </Button>
       </div>
 
@@ -41,9 +41,10 @@ export const Header: React.FC = () => {
           <NotificationIcon/>
         </IconButton>
         <Avatar
-          className="ml-15"
+          className={styles.avatar}
           alt="Alexandr Kozin" 
           src="https://avatars.githubusercontent.com/u/66381294?v=4" />
+          <ArrowBottom />
       </div>
 
     </Paper>
