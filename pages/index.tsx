@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import { Header } from '../components/Header';
 import { Post } from '../components/Post';
+import { LeftMenu } from '../components/LeftMenu';
 
 export default function Home() {
   return (
@@ -18,7 +19,9 @@ export default function Home() {
       <Header/>
       
       <div>
-        <div className = "leftSide"></div>
+        <div className = "leftSide">
+          <LeftMenu />
+        </div>
         <div className = "content">
           <Post />
         </div>
