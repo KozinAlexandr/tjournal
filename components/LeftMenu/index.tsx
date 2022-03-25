@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
-import {WhatshotOutlined as FireIcon,
+import {
+  WhatshotOutlined as FireIcon,
   SmsOutlined as MessageIcon,
   TrendingUpOutlined as TrendingIcon,
   FormatListBulletedOutlined as ListIcon,

@@ -17,12 +17,13 @@ export const Header: React.FC = () => {
       <IconButton>
           <MenuIcon/>
         </IconButton>
-        <svg className={styles.logo} viewBox="0 0 24 25">
-          <path fill = "#e8a427" d="M0 19h8.5v6H0v-6z"></path>
-          <path d="M0 7h8.5v18l6.5-6V7h9V0H0V7z"></path>
-          <path fill = "rgba(0,0,0,0.15)" d="M7.5 19h1v6l-1-6z"></path>
-        </svg>
-        
+        <a href=" /">
+          <svg className={styles.logo} viewBox="0 0 24 25">
+            <path fill = "#e8a427" d="M0 19h8.5v6H0v-6z"></path>
+            <path d="M0 7h8.5v18l6.5-6V7h9V0H0V7z"></path>
+            <path fill = "rgba(0,0,0,0.15)" d="M7.5 19h1v6l-1-6z"></path>
+          </svg>
+        </a>
         <div className={styles.searchBlock}>
           <SearchIcon/>
           <input placeholder="Поиск"/>
@@ -40,13 +41,14 @@ export const Header: React.FC = () => {
         <IconButton>
           <NotificationIcon/>
         </IconButton>
-        <Avatar
+        <a className = "d-flex align-center" href="/profile/1">
+          <Avatar
           className={styles.avatar}
           alt="Alexandr Kozin" 
           src="https://avatars.githubusercontent.com/u/66381294?v=4" />
           <ArrowBottom />
+        </a>
       </div>
-
     </Paper>
   );
 };

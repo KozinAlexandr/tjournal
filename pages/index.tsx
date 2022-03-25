@@ -1,12 +1,28 @@
+import {Post} from '../components/Post';
+import {MainLayout} from '../layouts/MainLayout';
+
+export default function Home() {
+  return (
+    <MainLayout>
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+    </MainLayout>
+  );
+}
+//Paper, как header
+/* 
 import Head from 'next/head';
 
 import { Header } from '../components/Header';
 import { Post } from '../components/Post';
 import { LeftMenu } from '../components/LeftMenu';
 
-export default function Home() {
-  return (
-    <div>
+<div>
       <Head>
         <title>SJournal</title>
         <link rel="icon" href="/favicon.ico" />
@@ -30,7 +46,4 @@ export default function Home() {
         <div className = "rightSide"></div>
       </div>
 
-    </div>
-  )
-}
-//Paper, как header
+    </div> */
