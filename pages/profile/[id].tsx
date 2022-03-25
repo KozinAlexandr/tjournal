@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Paper, Avatar, Typography, Button, Tabs, Tab } from '@material-ui/core';
 import {
   SettingsOutlined as SettingsIcon,
@@ -22,15 +23,21 @@ export default function Profile() {
             </Typography>
           </div>
           <div>
-            <Button
-              style={{ height: 42, minWidth: 45, width: 45, marginRight: 10 }}
-              variant="contained">
-              <SettingsIcon />
-            </Button>
-            <Button style={{ height: 42 }} variant="contained" color="primary">
-              <MessageIcon className="mr-10" />
-              Написать
-            </Button>
+            <Link href="/profile/settings">
+              <a>
+                <Button
+                  style={{ height: 42, minWidth: 45, width: 45, marginRight: 10 }}
+                  variant="contained">
+                  <SettingsIcon />
+                </Button>
+              </a>
+            </Link>
+
+              <Button style={{ height: 42 }} variant="contained" color="primary">
+                <MessageIcon className="mr-10" />
+                Написать
+              </Button>
+            
           </div>
         </div>
         <div className="d-flex mb-10 mt-10">

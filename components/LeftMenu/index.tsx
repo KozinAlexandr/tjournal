@@ -1,45 +1,40 @@
 import React from 'react';
+import Link from 'next/link';
 import { Button } from '@material-ui/core';
 import {
   WhatshotOutlined as FireIcon,
   SmsOutlined as MessageIcon,
   TrendingUpOutlined as TrendingIcon,
   FormatListBulletedOutlined as ListIcon,
-} from '@mui/icons-material/';
+} from '@material-ui/icons';
 
 import styles from './LeftMenu.module.scss';
+import { useRouter } from 'next/router';
 
+const menu = [
+  { text: 'Лента', icon: <FireIcon />, path: '/' },
+  { text: 'Сообщения', icon: <MessageIcon />, path: '/messages' },
+  { text: 'Рейтинг RJ', icon: <TrendingIcon />, path: '/rating' },
+  { text: 'Подписки', icon: <ListIcon />, path: '/follows' },
+];
 
-export const LeftMenu: React.FC = () => {
+export const LeftMenu: React.FC = () =>{
   return (
-    <div className={styles.menu}>
-      <ul>
-        <li>
-          <Button>
-            <FireIcon />
-              Лента
-            </Button>
-        </li>
-        <li>
-          <Button>
-            <MessageIcon />
-              Сообщение
-            </Button>
-        </li>
-        <li>
-          <Button>
-            <TrendingIcon />
-              Рейтинг SJ
-            </Button>
-        </li>
-        <li>
-          <Button>
-            <ListIcon />
-              Подписки
-            </Button>
-        </li>
-      </ul>
-    </div>
-  );
+      <div className={styles.menu}>
+        <ul>
+          {menu.map((obj) => (
+            <li key={obj.path}>
+              <Link href={obj.path}>
+                <a>
+                  <Button>
+                    {obj.icon}
+                    {obj.text}
+                  </Button>
+                </a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
 };
-//React.FC - функциональный компонент

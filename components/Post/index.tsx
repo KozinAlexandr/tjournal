@@ -26,30 +26,30 @@ export const Post: React.FC = () => {
           height = {500}
           width = {600}
           />
-      <div>
-        <ul className={styles.actions}>
-          <li>
-            <IconButton>
-              <CommentsIcon />
-            </IconButton>
+      <ul className={styles.actions}>
+        <li>
+          <IconButton>
+            <CommentsIcon />
+          </IconButton>
+        </li>
+        <li>
+          <IconButton>
+            <RepostIcon />
+          </IconButton>
+        </li>
+        <li>
+          <IconButton>
+            <FavoriteIcon />
+          </IconButton>
           </li>
-          <li>
-            <IconButton>
-              <RepostIcon />
-            </IconButton>
-          </li>
-          <li>
-            <IconButton>
-              <FavoriteIcon />
-            </IconButton>
-            </li>
-          <li>
-            <IconButton>
-              <ShareIcon/>
-            </IconButton>
-          </li>
-        </ul>
-      </div>
+        <li>
+          <IconButton>
+            <ShareIcon/>
+          </IconButton>
+        </li>
+      </ul>
+
+
     </Paper>
   );
 }
