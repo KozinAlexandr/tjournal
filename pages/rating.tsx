@@ -1,6 +1,17 @@
-import { Paper, Table, TableBody, TableCell, TableHead, TableRow, Typography, Tabs, Tab, Button } from '@material-ui/core';
-import { FollowButton } from '../components/FollowButton';
+import {
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  Typography,
+  Tabs,
+  Tab,
+} from '@material-ui/core';
+
 import { MainLayout } from '../layouts/MainLayout';
+import { FollowButton } from '../components/FollowButton';
 
 export default function Rating() {
   return (
@@ -14,7 +25,7 @@ export default function Rating() {
           рейтинга по итогам месяца бесплатно получают Plus-аккаунт на месяц.
         </Typography>
         <Tabs className="mt-10" value={0} indicatorColor="primary" textColor="primary">
-          <Tab label="Август" />
+          <Tab label="Март" />
           <Tab label="За 3 месяцуа" />
           <Tab label="За всё время" />
         </Tabs>
@@ -32,9 +43,9 @@ export default function Rating() {
           <TableBody>
             <TableRow>
               <TableCell component="th" scope="row">
-                <span className="mr-15">1</span>Иван Кудреневич
+                <span className="mr-15">1</span>Софья Манько
               </TableCell>
-              <TableCell align="right">540</TableCell>
+              <TableCell align="right">730</TableCell>
               <TableCell align="right">
                 <FollowButton />
               </TableCell>

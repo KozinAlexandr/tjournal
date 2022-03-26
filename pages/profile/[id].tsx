@@ -24,29 +24,25 @@ export default function Profile() {
           </div>
           <div>
             <Link href="/profile/settings">
-              <a>
-                <Button
-                  style={{ height: 42, minWidth: 45, width: 45, marginRight: 10 }}
-                  variant="contained">
-                  <SettingsIcon />
-                </Button>
-              </a>
-            </Link>
-
-              <Button style={{ height: 42 }} variant="contained" color="primary">
-                <MessageIcon className="mr-10" />
-                Написать
+              <Button
+                style={{ height: 42, minWidth: 45, width: 45, marginRight: 10 }}
+                variant="contained">
+                <SettingsIcon />
               </Button>
-            
+            </Link>
+            <Button style={{ height: 42 }} variant="contained" color="primary">
+              <MessageIcon className="mr-10" />
+              Написать
+            </Button>
           </div>
         </div>
         <div className="d-flex mb-10 mt-10">
           <Typography style={{ fontWeight: 'bold', color: '#35AB66' }} className="mr-15">
-            +7
+            +322
           </Typography>
-          <Typography>15 подписчиков</Typography>
+          <Typography>550 подписчиков</Typography>
         </div>
-        <Typography>В универе в 2020 года</Typography>
+        <Typography>Создатель самого популярного интернет-издание и агрегатор новостей SummerJournal.</Typography>
 
         <Tabs className="mt-20" value={0} indicatorColor="primary" textColor="primary">
           <Tab label="Статьи" />
@@ -63,11 +59,23 @@ export default function Profile() {
           <div className="d-flex mt-15">
             <Avatar
               className="mr-10"
-              src="https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/"
+              src="https://sun9-1.userapi.com/impf/28-d4LwF75nsZMkKEPbft2jE5bvSS2nsLRS_oA/rbi6JlY-Meg.jpg?size=800x800&quality=96&sign=54c6b982167b423c85fd1001dbc30334&type=album"
             />
             <Avatar
               className="mr-10"
-              src="https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/"
+              src="https://sun9-56.userapi.com/impf/0yqzTwz9G6aztRQ81_-lwmNAMcQBNHHl_XMjuA/uD0AK2_kFQM.jpg?size=639x538&quality=95&sign=1cc338b3ec8bc55afcf8efa7285abfce&type=album"
+            />
+            <Avatar
+              className="mr-10"
+              src="https://sun9-62.userapi.com/impg/PyonSRCQH9SFUB1MkzX60SfcTlnFjOTe_6Jwlg/R8BMiK6RQEw.jpg?size=1368x1368&quality=96&sign=d4d99db7085032ade0c2d45b983522ab&type=album"
+            />
+            <Avatar
+              className="mr-10"
+              src="https://sun9-49.userapi.com/impf/wRD5HGMu1d8LGwQ60i6PFrYluPhn-6bdkQvPhg/JSv4uw9XmFI.jpg?size=960x1280&quality=96&sign=6bb463205b722d23763f10d5029397b7&type=album"
+            />
+            <Avatar
+              className="mr-10"
+              src="https://pp.userapi.com/c633722/v633722645/26f8f/EzGUE4ATJdo.jpg"
             />
           </div>
         </Paper>

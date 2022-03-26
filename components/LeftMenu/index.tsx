@@ -9,32 +9,31 @@ import {
 } from '@material-ui/icons';
 
 import styles from './LeftMenu.module.scss';
-import { useRouter } from 'next/router';
 
 const menu = [
   { text: 'Лента', icon: <FireIcon />, path: '/' },
   { text: 'Сообщения', icon: <MessageIcon />, path: '/messages' },
-  { text: 'Рейтинг RJ', icon: <TrendingIcon />, path: '/rating' },
+  { text: 'Рейтинг SJ', icon: <TrendingIcon />, path: '/rating' },
   { text: 'Подписки', icon: <ListIcon />, path: '/follows' },
 ];
 
-export const LeftMenu: React.FC = () =>{
+export const LeftMenu: React.FC = () => { 
   return (
-      <div className={styles.menu}>
-        <ul>
-          {menu.map((obj) => (
-            <li key={obj.path}>
-              <Link href={obj.path}>
-                <a>
-                  <Button>
-                    {obj.icon}
-                    {obj.text}
-                  </Button>
-                </a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
+    <div className={styles.menu}>
+      <ul>
+        {menu.map((obj) => (
+          <li key={obj.path}>
+            <Link href={obj.path}>
+              <a>
+                <Button>
+                  {obj.icon}
+                  {obj.text}
+                </Button>
+              </a>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };

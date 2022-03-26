@@ -1,15 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import { IconButton, Paper, Typography } from '@material-ui/core';
+import { Paper, Typography } from '@material-ui/core';
 import Image from 'next/image';
-import {
-  ModeCommentOutlined as CommentsIcon, 
-  RepeatOutlined as RepostIcon,
-  BookmarkBorderOutlined as FavoriteIcon,
-  ShareOutlined as ShareIcon,
-} from '@mui/icons-material/';
-import styles from './Post.module.scss';
 
+import styles from './Post.module.scss';
+import { PostActions } from '../PostActions';
 
 export const Post: React.FC = () => {
   return (
@@ -17,44 +12,20 @@ export const Post: React.FC = () => {
       <Typography variant="h5" className={styles.title}>
         <Link href="/news/test-123">
           <a>
-          Рынок денег рухнул: мем про «покупающих деньги» 
-          котов-бизнесменов сильно изменился из-за экономической ситуации в России
+          Рынок денег рухнул: мем про «покупающих деньги» котов-бизнесменов 
+          сильно изменился из-за экономической ситуации в России
           </a>
         </Link>
-        
       </Typography>
-      <Typography className = "mt-10 mb-15">
-          Финансовый совет на 2022 год: продавайте деньги.
+      <Typography className="mt-10 mb-15">
+        Финансовый совет на 2022 год: продавайте деньги.
       </Typography>
-      <Image src="https://leonardo.osnova.io/6d9f3008-03b1-5dd6-a4eb-e19763e4c77e/-/preview/700/-/format/webp/" 
-          height = {500}
-          width = {600}
-          />
-      <ul className={styles.actions}>
-        <li>
-          <IconButton>
-            <CommentsIcon />
-          </IconButton>
-        </li>
-        <li>
-          <IconButton>
-            <RepostIcon />
-          </IconButton>
-        </li>
-        <li>
-          <IconButton>
-            <FavoriteIcon />
-          </IconButton>
-          </li>
-        <li>
-          <IconButton>
-            <ShareIcon/>
-          </IconButton>
-        </li>
-      </ul>
-
-
+      <Image
+        src="https://leonardo.osnova.io/6d9f3008-03b1-5dd6-a4eb-e19763e4c77e/-/preview/800/-/format/webp/"
+        height={500}
+        width={600}
+      />
+      <PostActions />
     </Paper>
   );
-}
-//React.FC - функциональный компонент
+};

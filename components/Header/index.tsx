@@ -1,22 +1,23 @@
-import { Paper, Button, IconButton, Avatar } from '@material-ui/core';
 import React from 'react';
 import Link from 'next/link';
+import { Paper, Button, IconButton, Avatar } from '@material-ui/core';
 import {
-  SearchOutlined as SearchIcon, 
+  SearchOutlined as SearchIcon,
+  CreateOutlined as PenIcon,
   SmsOutlined as MessageIcon,
   Menu as MenuIcon,
-  NotificationsOutlined as NotificationIcon,
   ExpandMoreOutlined as ArrowBottom,
-} from '@mui/icons-material/';
+  NotificationsNoneOutlined as NotificationIcon,
+} from '@material-ui/icons';
 
 import styles from './Header.module.scss';
 
 export const Header: React.FC = () => {
   return (
-    <Paper classes={{root: styles.root}} elevation={0}>
+    <Paper classes={{ root: styles.root }} elevation={0}>
       <div className="d-flex align-center">
-      <IconButton>
-          <MenuIcon/>
+        <IconButton>
+          <MenuIcon />
         </IconButton>
         <Link href="/">
           <a>
@@ -24,30 +25,29 @@ export const Header: React.FC = () => {
           </a>
         </Link>
 
-        
         <div className={styles.searchBlock}>
-          <SearchIcon/>
-          <input placeholder="Поиск"/>
+          <SearchIcon />
+          <input placeholder="Поиск" />
         </div>
-        
+
         <Button variant="contained" className={styles.penButton}>
           Новая запись
         </Button>
       </div>
-
       <div className="d-flex align-center">
         <IconButton>
-          <MessageIcon/>
+          <MessageIcon />
         </IconButton>
         <IconButton>
-          <NotificationIcon/>
+          <NotificationIcon />
         </IconButton>
         <Link href="/profile/1">
-          <a className = "d-flex align-center">
+          <a className="d-flex align-center">
             <Avatar
-            className={styles.avatar}
-            alt="Alexandr Kozin" 
-            src="https://avatars.githubusercontent.com/u/66381294?v=4" />
+              className={styles.avatar}
+              alt="Alexandr Kozin"
+              src="https://avatars.githubusercontent.com/u/66381294?v=4"
+            />
             <ArrowBottom />
           </a>
         </Link>
@@ -55,4 +55,4 @@ export const Header: React.FC = () => {
     </Paper>
   );
 };
-//React.FC - функциональный компонент
+  
