@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { IconButton, Paper, Typography } from '@material-ui/core';
 import Image from 'next/image';
 import {
@@ -14,10 +15,13 @@ export const Post: React.FC = () => {
   return (
     <Paper elevation={0} className="p-20" classes={{ root: styles.paper }}>
       <Typography variant="h5" className={styles.title}>
-        <a href="#">
-        Рынок денег рухнул: мем про «покупающих деньги» 
-        котов-бизнесменов сильно изменился из-за экономической ситуации в России
-        </a>
+        <Link href="/news/test-123">
+          <a>
+          Рынок денег рухнул: мем про «покупающих деньги» 
+          котов-бизнесменов сильно изменился из-за экономической ситуации в России
+          </a>
+        </Link>
+        
       </Typography>
       <Typography className = "mt-10 mb-15">
           Финансовый совет на 2022 год: продавайте деньги.
