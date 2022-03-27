@@ -2,7 +2,6 @@ import React from 'react';
 import ArrowRightIcon from '@material-ui/icons/NavigateNextOutlined';
 
 import styles from './SideComments.module.scss';
-
 const items = [
   {
     user: {
@@ -75,7 +74,7 @@ const CommentItem: React.FC<CommentItemProps> = ({ user, text, post }) => {
   return (
     <div className={styles.commentItem}>
       <div className={styles.userInfo}>
-        <img src="https://nyaa.shikimori.one/system/users/x64/515005.png?1598213191" />
+        <img src="https://nyaa.shikimori.one/system/users/x64/515005.png?1598213191"/>
         <a href="#">
           <b>{user.fullname}</b>
         </a>
@@ -95,6 +94,7 @@ export const SideComments = () => {
         Комментарии <ArrowRightIcon />
       </h3>
       {items.map((obj) => (
+        // eslint-disable-next-line react/jsx-key
         <CommentItem {...obj} />
       ))}
     </div>

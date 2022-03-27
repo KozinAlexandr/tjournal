@@ -23,7 +23,7 @@ export default function Profile() {
             </Typography>
           </div>
           <div>
-            <Link href="/profile/settings">
+            <Link href="/profile/settings" passHref>
               <Button
                 style={{ height: 42, minWidth: 45, width: 45, marginRight: 10 }}
                 variant="contained">
