@@ -18,9 +18,15 @@ export default function Home() {
         </Tabs>
         <Divider />
         <div className="mb-20" />
-        <Comment />
-        <Comment />
-        <Comment />
+        <Comment user={{
+          fullname: ''
+        }} text={''} />
+        <Comment user={{
+          fullname: ''
+        }} text={''} />
+        <Comment user={{
+          fullname: ''
+        }} text={''} />
       </Paper>
     </MainLayout>
   );
