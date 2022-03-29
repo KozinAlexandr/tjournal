@@ -20,7 +20,7 @@ export const Header: React.FC = () => {
         </IconButton>
         <Link href="/">
           <a>
-            <img height={35} className="mr-20" src="/static/img/logo.svg" alt="Logo" />
+            <img height={35} className="mr-20" src="/static/img/logo-habbo.png" alt="Logo" />
           </a>
         </Link>
 
