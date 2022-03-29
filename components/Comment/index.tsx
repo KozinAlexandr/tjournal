@@ -7,11 +7,13 @@ import styles from './Comment.module.scss';
 interface CommentPostProps {
   user: {
     fullname: string;
+    avatarUrl: string;
   };
   text: string;
+  createdAt: string;
 }
 
-export const Comment: React.FC<CommentPostProps> = ({ user, text }) => {
+export const Comment: React.FC<CommentPostProps> = ({ user, text, createdAt }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -26,14 +28,14 @@ export const Comment: React.FC<CommentPostProps> = ({ user, text }) => {
     <div className={styles.comment}>
       <div className={styles.userInfo}>
         <img
-          src="https://i.pinimg.com/564x/7e/16/cb/7e16cb7f729dad2fe9de384e25485636.jpg"
+          src={user.avatarUrl}
           alt="Avatar"
         />
-        <b>Master Oogway</b>
-        <span>3 часа назад</span>
+        <b>{user.fullname}</b>
+        <span>{createdAt}</span>
       </div>
       <Typography className={styles.text}>
-        Твои мысли подобны кругам на воде, друг мой. В волнении исчезает ясность, но если ты дашь волнам успокоиться, ответ станет очевидным.
+        {text}
       </Typography>
       <span className={styles.replyBtn}>Ответить</span>
       <IconButton onClick={handleClick}>
