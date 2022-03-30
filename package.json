@@ -8,6 +8,16 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "bracketSpacing": true
+  },
+
   "dependencies": {
     "@editorjs/editorjs": "^2.23.2",
     "@emotion/react": "^11.8.2",
