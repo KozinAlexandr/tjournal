@@ -2,41 +2,22 @@ import React from 'react';
 import ArrowRightIcon from '@material-ui/icons/NavigateNextOutlined';
 import data from '../../data'
 import styles from './SideComments.module.scss';
+import { CommentItem } from './CommentItem';
+import clsx from 'clsx';
 
-interface CommentItemProps {
-  user: {
-    fullname: string;
-  };
-  text: string;
-  post: {
-    title: string;
-  };
-}
-
-const CommentItem: React.FC<CommentItemProps> = ({ user, text, post }) => {
-  return (
-    <div className={styles.commentItem}>
-      <div className={styles.userInfo}>
-        <img src="https://nyaa.shikimori.one/system/users/x64/515005.png?1598213191"/>
-        <a href="#">
-          <b>{user.fullname}</b>
-        </a>
-      </div>
-      <p className={styles.text}>{text}</p>
-      <a href="#">
-        <span className={styles.postTitle}>{post.title}</span>
-      </a>
-    </div>
-  );
-};
 
 export const SideComments = () => {
+  const [visible, setVisible] = React.useState(true);
+
+  const toggleVisible = () => {
+    setVisible(!visible);
+  }
   return (
-    <div className={styles.root}>
-      <h3>
+    <div className={clsx(styles.root, !visible && styles.rotated)}>
+      <h3 onClick={toggleVisible}>
         Комментарии <ArrowRightIcon />
       </h3>
-      {data.comments.popular.map((obj) => (
+      {visible && data.comments.popular.map((obj) => (
         <CommentItem key={obj.id} {...obj} />
       ))}
     </div>
