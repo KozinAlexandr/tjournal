@@ -2,23 +2,12 @@ import React from 'react';
 import { Divider, Paper, Tab, Tabs, Typography } from '@material-ui/core';
 import { Comment } from '../Comment';
 import { AddCommentForm } from '../AddCommentForm';
+import data from '../../data'
 
-type CommentObj={
-  text: string;
-  id: number;
-  createdAt: string;
-  user: {
-    fullname: string;
-    avatarUrl: string;
-  }
-}
 
-interface PostCommentsProps { 
-  items: CommentObj[],
-}
-
-export const PostComments: React.FC <PostCommentsProps> = ({items})=> {
+export const PostComments: React.FC = ()=> {
   const [activeTab, setActiveTab] = React.useState(0);
+  const comments = data.comments[activeTab === 0 ? 'popular' : 'new'];
   return (
     <Paper elevation={0} className="mt-40 p-30">
         <div className="container">
@@ -33,7 +22,7 @@ export const PostComments: React.FC <PostCommentsProps> = ({items})=> {
           <AddCommentForm />
           <div className="mb-20" />
           {//skoko budet komentov stolko render component
-            items.map(obj => <Comment key={obj.id} user={obj.user} text={obj.text} createdAt={obj.createdAt} />)
+            comments.map(obj => <Comment key={obj.id} user={obj.user} text={obj.text} createdAt={obj.createdAt} />)
           }
         </div>
     </Paper>
