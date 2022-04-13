@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { CreateUserDto, LoginDto, ResponseUser } from './types';
+import {CreateUserDto, LoginDto, ResponseUser} from './types';
 
 const instance = axios.create({
     baseURL: 'http://localhost:3001/',
@@ -14,4 +14,13 @@ export const UserApi = {
         const { data } = await instance.post<LoginDto, { data: ResponseUser }>('/auth/login', dto);
         return data;
     },
+    async getMe(token: string) {
+        const { data } = await instance.get<ResponseUser>('/users/me',{
+            headers:{
+                Authorization: `Bearer ${token}`,
+            },
+        });
+        return data;
+    },
+
 };
